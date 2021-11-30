@@ -32,7 +32,7 @@ I divide the big csv file into files of maximum 1MB in the csv subfolder. First 
 
 ### Parsing and insertion in mongdb
 
-First step here is to parse the header.csv file and look for the fields we want to save in mongodb. We save in an array the indexes of these fields. On my computer I use 4 threads corresponding to my number of CPU which seems to be the most efficient. Hence each process will be in charge of one forth of the files (or one more, we make sure that every entry is parsed and inserted in the database). Each process is started with pm2 with the following arguments :
+First step here is to parse the header.csv file and look for the fields we want to save in mongodb. We save in an array the indexes of these fields. Each process will be in charge of one forth of the files (or one more, we make sure that every entry is parsed and inserted in the database). Each process is started with pm2 with the following arguments :
 * array of paths to parse
 * array of number corresponding to the indexes of the fields we have to keep in a csv line (sorted)
 * array of keys for each of these fields
