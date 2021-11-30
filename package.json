@@ -1,0 +1,13 @@
+{
+  "name": "sirene-invader",
+  "version": "1.0.0",
+  "description": "nodejs project: SIRENE INVADER",
+  "main": "index.js",
+  "author": "marc.hillion <marc.hillion@epita.fr>",
+  "license": "MIT",
+  "dependencies": {
+    "mongodb": "^4.1.4",
+    "pm2": "^5.1.2"
+  },
+  "type": "module"
+}
